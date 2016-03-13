@@ -5,7 +5,7 @@ var db = new sqlite3.Database("agents.sqlite");
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
 
 router.post('/agentsearch', function(req, res) {
