@@ -16,16 +16,31 @@ a {
 
 .img {
     position: relative;
-    width: 1000px;
+    /*width: 100%;*/
     min-height: 750px;
     margin: 0 auto;
-    background: url('../images/weiku.png');
+    /*background: url('../images/weiku.png');
+    background-size: 100% 100%;*/
 }
-
-.search {
+.img img {
     position: absolute;
-    top: 250px;
-    left: 270px;;
+    z-index: 10;
+    width: 100%;
+    float: left;
+}
+.search {
+    /*position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;*/
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    right: 50%;
+    top: 300px;
+    width: 480px;
+    margin-left: -240px;
 }
 
 .search input[type="text"] {
