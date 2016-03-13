@@ -3,6 +3,7 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/components/jquery/dist/jquery.min.js"></script>
   </head>
   <body>
     <section>
@@ -23,9 +24,9 @@
               type: 'post',
               success: function(result) {
                   if(result.length> 0) {
-                      alert(result[0].name + '  为汉珍御典中式男露'+ result[0].wheres +'。');
+                      alert(result[0].name + '  为英国卫裤'+ result[0].wheres +'。');
                   } else {
-                      alert(name + '  非汉珍御典中式男露代理，请谨慎购买其产品!');
+                      alert(name + '  非为英国卫裤代理，请谨慎购买其产品!');
                   }
               }
           })

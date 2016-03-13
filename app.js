@@ -5,6 +5,24 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var fs = require("fs");
+var file = "agents.sqlite";
+var exists = fs.existsSync(file);
+if(!exists) {
+    console.log("Creating DB file");
+    fs.openSync(file, "w");
+
+    var sqlite3 = require("sqlite3").verbose();
+    var db = new sqlite3.Database(file);
+    db.serialize(function() {
+        db.run("CREATE TABLE agent (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, wheres TEXT)");
+        var stmt = db.prepare("INSERT INTO agent('name', 'wheres') VALUES ('test', 'test')");
+        stmt.run();
+        stmt.finalize();
+    })
+}
+
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
