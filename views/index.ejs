@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <section>
+        <div class="img">
+            <div class="search">
+                <input type="text" id="agent">
+                <input type="button" name="name" value="查询" id="searchbtn">
+            </div>
+        </div>
+    </section>
+  </body>
+  <script type="text/javascript">
+      $('#searchbtn').click(function () {
+          var name = $('#agent').val();
+          $.ajax({
+              url: '/agentsearch',
+              data: {"name": name},
+              type: 'post',
+              success: function(result) {
+                  if(result.length> 0) {
+                      alert(result[0].name + '  为汉珍御典中式男露'+ result[0].wheres +'。');
+                  } else {
+                      alert(name + '  非汉珍御典中式男露代理，请谨慎购买其产品!');
+                  }
+              }
+          })
+      })
+  </script>
+</html>

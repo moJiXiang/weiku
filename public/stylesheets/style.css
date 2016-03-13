@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    border: none;
+}
+
+body {
+}
+
+a {
+  color: #00B7FF;
+}
+
+.img {
+    position: relative;
+    width: 1000px;
+    min-height: 750px;
+    margin: 0 auto;
+    background: url('../images/weiku.png');
+}
+
+.search {
+    position: absolute;
+    top: 250px;
+    left: 270px;;
+}
+
+.search input[type="text"] {
+    float: left;
+    width: 350px;
+    height: 50px;
+    background: rgba(10, 26, 127, 0.5);
+    outline: none;
+    padding-left: 20px;
+    font-size: 32px;
+    color: white;
+}
+
+.search input[type="button"] {
+    float: left;
+    width: 110px;
+    height: 50px;
+    background: rgba(10, 26, 127, 1);
+    font-size: 32px;
+    line-height: 50px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
