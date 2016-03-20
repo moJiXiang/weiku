@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>英国卫裤</title>
+    <meta name="viewport" content="width=device-width">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="/components/jquery/dist/jquery.min.js"></script>
   </head>
@@ -17,19 +18,22 @@
     </section>
   </body>
   <script type="text/javascript">
-      $('#searchbtn').click(function () {
-          var name = $('#agent').val();
-          $.ajax({
-              url: '/agentsearch',
-              data: {"name": name},
-              type: 'post',
-              success: function(result) {
-                  if(result.length> 0) {
-                      alert(result[0].name + '  为英国卫裤'+ result[0].wheres +'。');
-                  } else {
-                      alert(name + '  非为英国卫裤代理，请谨慎购买其产品!');
+      $(document).ready(function() {
+
+          $('#searchbtn').click(function () {
+              var name = $('#agent').val();
+              $.ajax({
+                  url: '/agentsearch',
+                  data: {"name": name},
+                  type: 'post',
+                  success: function(result) {
+                      if(result.length> 0) {
+                          alert(result[0].name + '  为英国卫裤'+ result[0].wheres +'。');
+                      } else {
+                          alert(name + '  非为英国卫裤代理，请谨慎购买其产品!');
+                      }
                   }
-              }
+              })
           })
       })
   </script>

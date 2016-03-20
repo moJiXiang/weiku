@@ -28,7 +28,9 @@ a {
     width: 100%;
     float: left;
 }
-.search {
+@media screen and (max-width: 1200px) {
+
+  .search {
     /*position: absolute;
     top: 0;
     left: 0;
@@ -38,9 +40,26 @@ a {
     z-index: 100;
     left: 50%;
     right: 50%;
-    top: 300px;
+    top: 40%;
     width: 480px;
     margin-left: -240px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .search {
+    /*position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;*/
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    right: 50%;
+    top: 60%;
+    width: 480px;
+    margin-left: -240px;
+  }
 }
 
 .search input[type="text"] {
