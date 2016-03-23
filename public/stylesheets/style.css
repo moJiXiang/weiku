@@ -7,64 +7,62 @@ input {
     border: none;
 }
 
+html, body {
+  height: 100%;
+  position: relative;
+}
+
 body {
+  background-image: url(../images/pc-weiku.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #464646;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url(../images/photo-weiku.jpg);
+  }
 }
 
 a {
   color: #00B7FF;
 }
 
-.img {
-    position: relative;
-    /*width: 100%;*/
-    min-height: 750px;
-    margin: 0 auto;
-    /*background: url('../images/weiku.png');
-    background-size: 100% 100%;*/
-}
-.img img {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    float: left;
-}
-@media screen and (max-width: 1200px) {
+
+/*.search {
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  right: 50%;
+  width: 30%;
+  margin-left: -240px;
+}*/
+
+/*@media screen and (max-width: 768px) {
 
   .search {
-    /*position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;*/
-    position: absolute;
-    z-index: 100;
-    left: 50%;
-    right: 50%;
-    top: 40%;
-    width: 480px;
-    margin-left: -240px;
+    top: 30%;
   }
 }
-@media screen and (min-width: 1200px) {
+
+@media screen and (min-width: 769px) and (max-width: 1399px) {
+
   .search {
-    /*position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;*/
-    position: absolute;
-    z-index: 100;
-    left: 50%;
-    right: 50%;
-    top: 60%;
-    width: 480px;
-    margin-left: -240px;
+    top: 40%;
+  }
+}
+@media screen and (min-width: 1400px) {
+
+  .search {
+    top: 35%;
   }
 }
 
 .search input[type="text"] {
     float: left;
-    width: 350px;
+    width: 60%;
     height: 50px;
     background: rgba(10, 26, 127, 0.5);
     outline: none;
@@ -75,11 +73,23 @@ a {
 
 .search input[type="button"] {
     float: left;
-    width: 110px;
+    width: 35%;
     height: 50px;
     background: rgba(10, 26, 127, 1);
     font-size: 32px;
     line-height: 50px;
     text-align: center;
     color: rgb(255, 255, 255);
+}*/
+
+section {
+  position: absolute;
+  top: 35%;
+}
+
+.col-center-block {
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
