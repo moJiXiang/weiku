@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-  background-image: url(../images/pc-weiku.jpg);
+  background-image: url(http://7xs6c6.com1.z0.glb.clouddn.com/pc-weiku.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,7 +22,7 @@ body {
 
 @media only screen and (max-width: 767px) {
   body {
-    background-image: url(../images/photo-weiku.jpg);
+    background-image: url(http://7xs6c6.com1.z0.glb.clouddn.com/photo-weiku.png);
   }
 }
 
@@ -85,6 +85,19 @@ a {
 section {
   position: absolute;
   top: 35%;
+}
+
+.input-group input[type="text"], #searchbtn {
+  border: none;
+  color: white;
+  outline: none;
+}
+
+.input-group input[type="text"] {
+  background: rgba(10, 26, 127, 0.5);
+}
+#searchbtn {
+  background: rgba(10, 26, 127, 1);
 }
 
 .col-center-block {
